@@ -1,23 +1,24 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav>
-      <div class="logo">
-        <a href="#">Logo</a>
+      <div className="logo">
+        <Link to="/">Logo</Link>
       </div>
-      <ul class="nav-links">
+      <ul className="nav-links">
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#">Shop</a>
+          <Link to="/shop">Shop</Link>
         </li>
-        <li class="fa-shopping-cart">
-          <a href="#">
+        <li className="fa-shopping-cart">
+          <Link to="/cart">
             <FaShoppingCart />
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

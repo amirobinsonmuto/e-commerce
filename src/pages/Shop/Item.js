@@ -3,17 +3,8 @@ import QuantityButton from "../../components/QuantityButton";
 import AddToCartButton from "../../components/AddToCartButton";
 import { useState } from "react";
 
-const Item = ({ item }) => {
+const Item = ({ item, addToCart }) => {
   const [quantity, setQuantity] = useState(0);
-
-  const increment = () => {
-    setQuantity(quantity + 1);
-  };
-
-  const decrement = () => {
-    // change the alert negative number to making button inactive later
-    quantity > 0 ? setQuantity(quantity - 1) : alert("no negative number");
-  };
 
   return (
     <div className="grid-item">
@@ -21,12 +12,12 @@ const Item = ({ item }) => {
       <h3>{item.name}</h3>
       <p>{item.description}</p>
       <p>{`$${item.price}`}</p>
-      <QuantityButton
+      <QuantityButton quantity={quantity} setQuantity={setQuantity} />
+      <AddToCartButton
+        itemId={item.id}
         quantity={quantity}
-        increment={increment}
-        decrement={decrement}
+        addToCart={addToCart}
       />
-      <AddToCartButton />
     </div>
   );
 };

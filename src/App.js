@@ -34,6 +34,17 @@ function App() {
     });
   };
 
+  const removeItem = (itemId) => {
+    setItems((prevItems) => {
+      return prevItems.map((item) => {
+        if (item.id === itemId) {
+          return { ...item, isInCart: false, quantity: 0 };
+        }
+        return item;
+      });
+    });
+  };
+
   useEffect(() => {
     console.log(items);
   }, [items]);
@@ -51,7 +62,11 @@ function App() {
           <Route
             path="/cart"
             element={
-              <Cart items={items} handleQuantityChange={handleQuantityChange} />
+              <Cart
+                items={items}
+                handleQuantityChange={handleQuantityChange}
+                removeItem={removeItem}
+              />
             }
           />
         </Routes>

@@ -1,6 +1,6 @@
 import React from "react";
 import QuantityButton from "../../components/QuantityButton";
-import AddToCartButton from "../../components/AddToCartButton";
+import AddToCartButton from "./AddToCartButton";
 import { useState } from "react";
 
 const Item = ({ item, addToCart }) => {

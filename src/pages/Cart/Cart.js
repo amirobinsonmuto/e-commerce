@@ -1,7 +1,7 @@
 import React from "react";
 import ItemInCart from "./ItemInCart";
 
-const Cart = ({ items, handleQuantityChange }) => {
+const Cart = ({ items, handleQuantityChange, removeItem }) => {
   return (
     <main className="container">
       <h1>Shopping Cart</h1>
@@ -13,6 +13,7 @@ const Cart = ({ items, handleQuantityChange }) => {
               key={item.id}
               item={item}
               handleQuantityChange={handleQuantityChange}
+              removeItem={removeItem}
             />
           ))}
       </div>

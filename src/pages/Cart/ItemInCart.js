@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import QuantityButton from "../../components/QuantityButton";
-import UpdateButton from "../../components/UpdateButton";
+import UpdateButton from "./UpdateButton";
+import DeleteButton from "./DeleteButton";
 
-const ItemInCart = ({ item, handleQuantityChange }) => {
+const ItemInCart = ({ item, handleQuantityChange, removeItem }) => {
   const [quantity, setQuantity] = useState(item.quantity);
 
   return (
@@ -18,7 +19,9 @@ const ItemInCart = ({ item, handleQuantityChange }) => {
         itemId={item.id}
         quantity={quantity}
         handleQuantityChange={handleQuantityChange}
+        removeItem={removeItem}
       />
+      <DeleteButton itemId={item.id} removeItem={removeItem} />
     </div>
   );
 };

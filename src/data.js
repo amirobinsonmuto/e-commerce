@@ -8,6 +8,7 @@ export const data = [
       "Relaxing and calming, lavender essential oil can help soothe the mind and promote restful sleep.",
     price: 24.95,
     image: item,
+    category: "Wellness",
   },
   {
     id: 2,

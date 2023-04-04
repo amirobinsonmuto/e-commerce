@@ -12,16 +12,16 @@ import Footer from "./components/Footer";
 function App() {
   const [items, setItems] = useState(data);
 
-  // const handleQuantityChange = (itemId, newQuantity) => {
-  //   setItems((prevItems) => {
-  //     return prevItems.map((item) => {
-  //       if (item.id === itemId) {
-  //         return { ...item, quantity: newQuantity, isInCart: true };
-  //       }
-  //       return item;
-  //     });
-  //   });
-  // };
+  const handleQuantityChange = (itemId, newQuantity) => {
+    setItems((prevItems) => {
+      return prevItems.map((item) => {
+        if (item.id === itemId) {
+          return { ...item, quantity: newQuantity };
+        }
+        return item;
+      });
+    });
+  };
 
   const addToCart = (itemId, newQuantity) => {
     setItems((prevItems) => {
@@ -48,7 +48,12 @@ function App() {
             path="/shop"
             element={<Shop items={items} addToCart={addToCart} />}
           />
-          <Route path="/cart" element={<Cart />} />
+          <Route
+            path="/cart"
+            element={
+              <Cart items={items} handleQuantityChange={handleQuantityChange} />
+            }
+          />
         </Routes>
         <Footer />
       </Router>

@@ -102,6 +102,18 @@ nav {
   max-width: 100%;
 }
 
+/* cart */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cart-item img {
+  width: 200px;
+}
+
 /* footer */
 
 footer {

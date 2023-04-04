@@ -13,11 +13,21 @@ const QuantityButton = ({ quantity, setQuantity }) => {
 
   return (
     <div className="quantity-button">
-      <button className="quantity-button__button" onClick={decrement}>
+      <button
+        className="quantity-button__button"
+        onClick={() => {
+          decrement();
+        }}
+      >
         <TfiMinus />
       </button>
       <input className="quantity-button__input" value={quantity} readOnly />
-      <button className="quantity-button__button" onClick={increment}>
+      <button
+        className="quantity-button__button"
+        onClick={() => {
+          increment();
+        }}
+      >
         <TfiPlus />
       </button>
     </div>

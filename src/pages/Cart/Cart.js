@@ -1,9 +1,21 @@
 import React from "react";
+import ItemInCart from "./ItemInCart";
 
-const Cart = () => {
+const Cart = ({ items, handleQuantityChange }) => {
   return (
     <main className="container">
-      <h1>Cart</h1>
+      <h1>Shopping Cart</h1>
+      <div className="cart-container">
+        {items
+          .filter((item) => item.isInCart)
+          .map((item) => (
+            <ItemInCart
+              key={item.id}
+              item={item}
+              handleQuantityChange={handleQuantityChange}
+            />
+          ))}
+      </div>
     </main>
   );
 };

@@ -1,8 +1,10 @@
 import React from "react";
 import QuantityButton from "../../components/QuantityButton";
 import AddToCartButton from "../../components/AddToCartButton";
+import { useState } from "react";
 
 const Item = ({ item }) => {
+  // const [quantity, setQuantity] = useState
   return (
     <div className="grid-item">
       <img src={item.image} alt={`${item.name} image}`} />

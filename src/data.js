@@ -10,6 +10,7 @@ export const data = [
     image: item,
     category: "Wellness",
     isInCart: false,
+    quantity: 0,
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const data = [
     image: item,
     category: "Wellness",
     isInCart: false,
+    quantity: 0,
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ export const data = [
     image: item,
     category: "Wellness",
     isInCart: false,
+    quantity: 0,
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ export const data = [
     image: item,
     category: "Skin Care",
     isInCart: false,
+    quantity: 0,
   },
   {
     id: 5,
@@ -50,6 +54,7 @@ export const data = [
     image: item,
     category: "Wellness",
     isInCart: false,
+    quantity: 0,
   },
   {
     id: 6,
@@ -60,6 +65,7 @@ export const data = [
     image: item,
     category: "Hair Care",
     isInCart: false,
+    quantity: 0,
   },
   {
     id: 7,
@@ -70,6 +76,7 @@ export const data = [
     image: item,
     category: "Hair Care",
     isInCart: false,
+    quantity: 0,
   },
   {
     id: 8,
@@ -80,6 +87,7 @@ export const data = [
     image: item,
     category: "Spiritual",
     isInCart: false,
+    quantity: 0,
   },
   {
     id: 9,
@@ -90,6 +98,7 @@ export const data = [
     image: item,
     category: "Relaxation",
     isInCart: false,
+    quantity: 0,
   },
   {
     id: 10,
@@ -100,6 +109,7 @@ export const data = [
     image: item,
     category: "Wellness",
     isInCart: false,
+    quantity: 0,
   },
   {
     id: 11,
@@ -110,6 +120,7 @@ export const data = [
     image: item,
     category: "Skin Care",
     isInCart: false,
+    quantity: 0,
   },
   {
     id: 12,
@@ -120,5 +131,6 @@ export const data = [
     image: item,
     category: "Beauty",
     isInCart: false,
+    quantity: 0,
   },
 ];

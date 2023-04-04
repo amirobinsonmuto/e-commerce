@@ -9,6 +9,7 @@ export const data = [
     price: 24.95,
     image: item,
     category: "Wellness",
+    isInCart: false,
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const data = [
     price: 18.95,
     image: item,
     category: "Wellness",
+    isInCart: false,
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ export const data = [
     price: 21.95,
     image: item,
     category: "Wellness",
+    isInCart: false,
   },
   {
     id: 4,
@@ -36,6 +39,7 @@ export const data = [
     price: 16.95,
     image: item,
     category: "Skin Care",
+    isInCart: false,
   },
   {
     id: 5,
@@ -45,6 +49,7 @@ export const data = [
     price: 14.95,
     image: item,
     category: "Wellness",
+    isInCart: false,
   },
   {
     id: 6,
@@ -54,6 +59,7 @@ export const data = [
     price: 19.95,
     image: item,
     category: "Hair Care",
+    isInCart: false,
   },
   {
     id: 7,
@@ -63,6 +69,7 @@ export const data = [
     price: 26.95,
     image: item,
     category: "Hair Care",
+    isInCart: false,
   },
   {
     id: 8,
@@ -72,6 +79,7 @@ export const data = [
     price: 29.95,
     image: item,
     category: "Spiritual",
+    isInCart: false,
   },
   {
     id: 9,
@@ -81,6 +89,7 @@ export const data = [
     price: 17.95,
     image: item,
     category: "Relaxation",
+    isInCart: false,
   },
   {
     id: 10,
@@ -90,6 +99,7 @@ export const data = [
     price: 12.95,
     image: item,
     category: "Wellness",
+    isInCart: false,
   },
   {
     id: 11,
@@ -99,6 +109,7 @@ export const data = [
     price: 23.95,
     image: item,
     category: "Skin Care",
+    isInCart: false,
   },
   {
     id: 12,
@@ -108,5 +119,6 @@ export const data = [
     price: 28.95,
     image: item,
     category: "Beauty",
+    isInCart: false,
   },
 ];

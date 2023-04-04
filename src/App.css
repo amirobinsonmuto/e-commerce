@@ -194,3 +194,20 @@ footer {
   font-size: 1rem;
   font-weight: bold;
 }
+
+/* add to cart button */
+.button {
+  background-color: black;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover,
+.button:active {
+  background-color: rgb(75, 74, 74);
+  color: white;
+}

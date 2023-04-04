@@ -1,5 +1,6 @@
 import React from "react";
 import QuantityButton from "../../components/QuantityButton";
+import AddToCartButton from "../../components/AddToCartButton";
 
 const Item = ({ item }) => {
   return (
@@ -9,6 +10,7 @@ const Item = ({ item }) => {
       <p>{item.description}</p>
       <p>{`$${item.price}`}</p>
       <QuantityButton />
+      <AddToCartButton />
     </div>
   );
 };

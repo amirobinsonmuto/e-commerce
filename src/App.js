@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import { data } from "./data";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import Home from "./pages/Home";
-import Shop from "./pages/Shop/Shop";
-import Cart from "./pages/Cart/Cart";
+import HomePage from "./pages/HomePage";
+import ShopPage from "./pages/Shop/ShopPage";
+import ItemDetailPage from "./pages/Shop/ItemDetailPage";
+import CartPage from "./pages/Cart/CartPage";
 import Footer from "./components/Footer";
 
 function App() {
@@ -82,15 +83,19 @@ function App() {
       <Router>
         <NavBar cartCount={cartCount} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
           <Route
             path="/shop"
-            element={<Shop items={items} addToCart={addToCart} />}
+            element={<ShopPage items={items} addToCart={addToCart} />}
+          />
+          <Route
+            path="/shop/:id"
+            element={<ItemDetailPage items={items} addToCart={addToCart} />}
           />
           <Route
             path="/cart"
             element={
-              <Cart
+              <CartPage
                 items={items}
                 handleQuantityChange={handleQuantityChange}
                 removeItem={removeItem}

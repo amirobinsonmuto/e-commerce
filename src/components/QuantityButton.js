@@ -15,7 +15,8 @@ const QuantityButton = ({ quantity, setQuantity }) => {
     <div className="quantity-button">
       <button
         className="quantity-button__button"
-        onClick={() => {
+        onClick={(e) => {
+          e.stopPropagation();
           decrement();
         }}
       >
@@ -24,7 +25,8 @@ const QuantityButton = ({ quantity, setQuantity }) => {
       <input className="quantity-button__input" value={quantity} readOnly />
       <button
         className="quantity-button__button"
-        onClick={() => {
+        onClick={(e) => {
+          e.stopPropagation();
           increment();
         }}
       >

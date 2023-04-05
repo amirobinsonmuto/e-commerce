@@ -1,5 +1,6 @@
 import React from "react";
 import ItemInCart from "./ItemInCart";
+import { useEffect } from "react";
 
 const Cart = ({
   items,
@@ -9,6 +10,10 @@ const Cart = ({
   taxes,
   shipping,
 }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="container">
       <h1>Shopping Cart</h1>

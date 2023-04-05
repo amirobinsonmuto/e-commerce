@@ -15,13 +15,9 @@ const Item = ({ item, addToCart }) => {
         <p>{`$${item.price}`}</p>
         <p>LEARN MORE</p>
       </Link>
-      <QuantityButton quantity={quantity} setQuantity={setQuantity} />
-      <br />
-      <AddToCartButton
-        itemId={item.id}
-        quantity={quantity + item.quantity}
-        addToCart={addToCart}
-      />
+      {/* <QuantityButton quantity={quantity} setQuantity={setQuantity} />
+      <br /> */}
+      <AddToCartButton itemId={item.id} quantity={1} addToCart={addToCart} />
     </div>
   );
 };

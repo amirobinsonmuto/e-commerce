@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 const ItemDetailPage = ({ items, addToCart }) => {
   const { id } = useParams();
   const item = items.find((item) => item.id === parseInt(id));
-  const [quantity, setQuantity] = useState(item.quantity);
+  const [quantity, setQuantity] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);

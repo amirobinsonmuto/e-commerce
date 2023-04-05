@@ -9,7 +9,7 @@ const Item = ({ item, addToCart }) => {
   return (
     <div className="grid-item">
       <img src={item.image} alt={`${item.name} image}`} />
-      <h3>{item.name}</h3>
+      <h2>{item.name}</h2>
       <p>{item.description}</p>
       <p>{`$${item.price}`}</p>
       <QuantityButton quantity={quantity} setQuantity={setQuantity} />

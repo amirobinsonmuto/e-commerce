@@ -13,7 +13,7 @@ const ItemInCart = ({ item, handleQuantityChange, removeItem }) => {
       <h3>{item.name}</h3>
       <p>{item.description}</p>
       <p>{`$${item.price}`}</p>
-      <p>Quantity:{item.quantity}</p>
+      <p>Quantity: {item.quantity}</p>
       <QuantityButton quantity={quantity} setQuantity={setQuantity} />
       <UpdateButton
         itemId={item.id}

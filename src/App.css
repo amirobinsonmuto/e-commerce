@@ -1,19 +1,22 @@
 .container {
   padding: 50px;
   width: 80%;
-  margin: 0 auto;
+  margin: 70px auto;
 }
 
 /* nav bar */
 
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
   background-color: #333;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 
 .logo a {
@@ -21,6 +24,7 @@ nav {
   font-weight: bold;
   text-decoration: none;
   color: #fff;
+  margin-left: 20px;
 }
 
 .nav-links {

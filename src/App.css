@@ -114,6 +114,53 @@ nav {
   width: 200px;
 }
 
+/* order summary */
+
+.order-summary {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.order-summary h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.order-summary table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-summary table td {
+  padding: 10px 0;
+}
+
+.order-summary table td:first-child {
+  width: 70%;
+  font-weight: bold;
+}
+
+.order-summary table td:last-child {
+  text-align: right;
+  font-weight: bold;
+}
+
+.order-summary table tfoot td:first-child {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.order-summary table tfoot td:last-child {
+  border-top: 1px solid #ccc;
+  text-align: right;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
 /* footer */
 
 footer {

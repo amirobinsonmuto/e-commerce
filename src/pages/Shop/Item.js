@@ -13,6 +13,7 @@ const Item = ({ item, addToCart }) => {
       <p>{item.description}</p>
       <p>{`$${item.price}`}</p>
       <QuantityButton quantity={quantity} setQuantity={setQuantity} />
+      <br />
       <AddToCartButton
         itemId={item.id}
         quantity={quantity}

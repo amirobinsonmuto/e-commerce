@@ -11,6 +11,9 @@ import Footer from "./components/Footer";
 
 function App() {
   const [items, setItems] = useState(data);
+  const [subtotal, setSubtotal] = useState(0);
+  const [taxes, setTaxes] = useState(0);
+  const [shipping, setShipping] = useState(0.0);
 
   const handleQuantityChange = (itemId, newQuantity) => {
     setItems((prevItems) => {
@@ -45,9 +48,26 @@ function App() {
     });
   };
 
+  // get subtotal
   useEffect(() => {
-    console.log(items);
+    let newTotal = 0;
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      newTotal += item.price * item.quantity;
+    }
+    let limitedNum = newTotal;
+    setSubtotal(limitedNum);
   }, [items]);
+
+  // get shipping
+  useEffect(() => {
+    subtotal < 50 && subtotal > 0 ? setShipping(15.0) : setShipping(0);
+  }, [subtotal]);
+
+  // get tax
+  useEffect(() => {
+    setTaxes((subtotal + shipping) * 0.12);
+  }, [subtotal, shipping]);
 
   return (
     <>
@@ -66,6 +86,9 @@ function App() {
                 items={items}
                 handleQuantityChange={handleQuantityChange}
                 removeItem={removeItem}
+                subtotal={subtotal}
+                taxes={taxes}
+                shipping={shipping}
               />
             }
           />

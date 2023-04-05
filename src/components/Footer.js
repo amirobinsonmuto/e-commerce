@@ -5,18 +5,20 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
-        <div className="footer-row">
-          <div className="footer-col">
-            <h4>About Us</h4>
+        <div className="footer-col">
+          <div className="footer-col-content">
+            <h3>About Us</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis
-              dui vel metus sagittis facilisis. Nam ultrices, sapien non blandit
-              gravida, lorem enim blandit arcu, eget hendrerit urna arcu at
-              mauris.
+              Discover the healing power of essential oils with our pure,
+              therapeutic-grade blends. Shop now for affordable, sustainable
+              products that promote physical, emotional, and spiritual
+              wellbeing. Take control of your health today.
             </p>
           </div>
-          <div className="footer-col">
-            <h4>Customer Service</h4>
+        </div>
+        <div className="footer-col">
+          <div className="footer-col-content">
+            <h3>Customer Service</h3>
             <ul>
               <li>Contact Us</li>
               <li>FAQs</li>
@@ -24,8 +26,10 @@ const Footer = () => {
               <li>Returns</li>
             </ul>
           </div>
-          <div className="footer-col">
-            <h4>My Account</h4>
+        </div>
+        <div className="footer-col">
+          <div className="footer-col-content">
+            <h3>My Account</h3>
             <ul>
               <li>My Orders</li>
               <li>My Account</li>
@@ -33,8 +37,10 @@ const Footer = () => {
               <li>Newsletter</li>
             </ul>
           </div>
-          <div className="footer-col">
-            <h4>Follow Us</h4>
+        </div>
+        <div className="footer-col">
+          <div className="footer-col-content">
+            <h3>Follow Us</h3>
             <ul className="social-icons">
               <li>
                 <FaFacebook />

@@ -19,7 +19,7 @@ const Item = ({ item, addToCart }) => {
       <br />
       <AddToCartButton
         itemId={item.id}
-        quantity={quantity}
+        quantity={quantity + item.quantity}
         addToCart={addToCart}
       />
     </div>

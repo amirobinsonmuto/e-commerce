@@ -21,12 +21,11 @@ const ItemDetailPage = ({ items, addToCart }) => {
       <div className="Item-info">
         <h1>{item.name}</h1>
         <p>{item.description}</p>
-        <p>{`Quantity: ${item.quantity}`}</p>
         <QuantityButton quantity={quantity} setQuantity={setQuantity} />
         <br />
         <AddToCartButton
           itemId={item.id}
-          quantity={quantity}
+          quantity={quantity + item.quantity}
           addToCart={addToCart}
         />
       </div>

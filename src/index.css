@@ -34,3 +34,9 @@ a {
   background-color: rgb(75, 74, 74);
   color: white;
 }
+
+.container {
+  padding: 50px;
+  width: 80%;
+  margin: 30px auto;
+}

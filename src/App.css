@@ -174,10 +174,11 @@ nav {
 }
 
 .order-summary h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 20px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
+  margin-top: 0;
 }
 
 .order-summary table {

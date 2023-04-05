@@ -1,13 +1,15 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const NavBar = ({ cartCount }) => {
   return (
     <nav>
-      <div className="logo">
-        <Link to="/">Logo</Link>
-      </div>
+      <Link to="/">
+        <img src={logo} className="logo" alt="Samy Essential Oils Logo" />
+      </Link>
+
       <ul className="nav-links">
         <li>
           <Link to="/">Home</Link>

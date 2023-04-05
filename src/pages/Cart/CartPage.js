@@ -56,6 +56,13 @@ const Cart = ({
               </tr>
             </tfoot>
           </table>
+          <br />
+          <p>
+            {shipping === 0
+              ? "Congrats! You get free shipping"
+              : "Your shipping will be free when you order more than $50"}
+          </p>
+          <button className="button wide-button">CHECK OUT</button>
         </div>
       </div>
     </main>

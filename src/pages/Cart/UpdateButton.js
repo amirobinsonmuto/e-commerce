@@ -16,7 +16,7 @@ const UpdateButton = ({
         }
       }}
     >
-      UPDATE
+      UPDATE QUANTITY
     </button>
   );
 };

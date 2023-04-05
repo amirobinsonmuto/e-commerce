@@ -35,6 +35,11 @@ a {
   color: white;
 }
 
+button[data-inactive="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .container {
   padding: 50px;
   width: 80%;

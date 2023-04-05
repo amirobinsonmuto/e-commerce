@@ -4,8 +4,7 @@ const AddToCartButton = ({ itemId, quantity, addToCart }) => {
   return (
     <button
       className="button"
-      onClick={(e) => {
-        e.stopPropagation();
+      onClick={() => {
         addToCart(itemId, quantity);
       }}
     >

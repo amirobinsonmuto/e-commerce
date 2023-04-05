@@ -7,8 +7,7 @@ const QuantityButton = ({ quantity, setQuantity }) => {
   };
 
   const decrement = () => {
-    // change the alert negative number to making button inactive later
-    quantity > 0 ? setQuantity(quantity - 1) : alert("no negative number");
+    setQuantity(quantity - 1);
   };
 
   return (
@@ -18,15 +17,17 @@ const QuantityButton = ({ quantity, setQuantity }) => {
         onClick={() => {
           decrement();
         }}
+        data-inactive={quantity === 0 ? "true" : undefined}
       >
         <TfiMinus />
       </button>
-      <input className="quantity-button__input" value={quantity} readOnly />
+      <input className="quantity-button__input" value={quantity} readyOnly />
       <button
         className="quantity-button__button"
         onClick={() => {
           increment();
         }}
+        data-inactive={quantity >= 100 ? "true" : undefined}
       >
         <TfiPlus />
       </button>

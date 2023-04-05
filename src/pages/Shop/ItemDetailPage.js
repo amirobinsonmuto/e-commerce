@@ -25,7 +25,7 @@ const ItemDetailPage = ({ items, addToCart }) => {
         <br />
         <AddToCartButton
           itemId={item.id}
-          quantity={quantity + item.quantity}
+          quantity={quantity}
           addToCart={addToCart}
         />
       </div>

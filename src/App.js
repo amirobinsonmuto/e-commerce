@@ -32,7 +32,12 @@ function App() {
     setItems((prevItems) => {
       return prevItems.map((item) => {
         if (item.id === itemId) {
-          return { ...item, isInCart: true, quantity: newQuantity };
+          const currentQuantity = item.quantity;
+          return {
+            ...item,
+            isInCart: true,
+            quantity: currentQuantity + newQuantity,
+          };
         }
         return item;
       });

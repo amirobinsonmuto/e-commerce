@@ -1,11 +1,9 @@
 import React from "react";
-import QuantityButton from "../../components/QuantityButton";
 import AddToCartButton from "./AddToCartButton";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Item = ({ item, addToCart }) => {
-  const [quantity, setQuantity] = useState(0);
+  const quantity = 1;
 
   return (
     <div className="grid-item item">
@@ -15,9 +13,11 @@ const Item = ({ item, addToCart }) => {
         <p>{`$${item.price}`}</p>
         <p>LEARN MORE</p>
       </Link>
-      {/* <QuantityButton quantity={quantity} setQuantity={setQuantity} />
-      <br /> */}
-      <AddToCartButton itemId={item.id} quantity={1} addToCart={addToCart} />
+      <AddToCartButton
+        itemId={item.id}
+        quantity={quantity}
+        addToCart={addToCart}
+      />
     </div>
   );
 };

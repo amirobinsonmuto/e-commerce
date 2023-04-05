@@ -14,6 +14,7 @@ function App() {
   const [subtotal, setSubtotal] = useState(0);
   const [taxes, setTaxes] = useState(0);
   const [shipping, setShipping] = useState(0.0);
+  const [cartCount, setCartCount] = useState(0);
 
   const handleQuantityChange = (itemId, newQuantity) => {
     setItems((prevItems) => {
@@ -48,7 +49,7 @@ function App() {
     });
   };
 
-  // get subtotal
+  // set subtotal
   useEffect(() => {
     let newTotal = 0;
     for (let i = 0; i < items.length; i++) {
@@ -59,20 +60,27 @@ function App() {
     setSubtotal(limitedNum);
   }, [items]);
 
-  // get shipping
+  // set shipping when there is a change in subtotal
   useEffect(() => {
     subtotal < 50 && subtotal > 0 ? setShipping(15.0) : setShipping(0);
   }, [subtotal]);
 
-  // get tax
+  // set taxes when there is a change in subtotal and shipping
   useEffect(() => {
     setTaxes((subtotal + shipping) * 0.12);
   }, [subtotal, shipping]);
 
+  // set cart count when the number of items in the cart changes
+  useEffect(() => {
+    let cartItems = items.filter((item) => item.isInCart);
+    const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    setCartCount(totalCount);
+  }, [items]);
+
   return (
     <>
       <Router>
-        <NavBar />
+        <NavBar cartCount={cartCount} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route

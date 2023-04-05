@@ -2,7 +2,7 @@ import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ cartCount }) => {
   return (
     <nav>
       <div className="logo">
@@ -18,6 +18,7 @@ const NavBar = () => {
         <li className="fa-shopping-cart">
           <Link to="/cart">
             <FaShoppingCart />
+            {cartCount > 0 && <span className="badge">{cartCount}</span>}
           </Link>
         </li>
       </ul>

@@ -18,54 +18,32 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Customer Service</h4>
             <ul>
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
-              <li>
-                <a href="#">FAQs</a>
-              </li>
-              <li>
-                <a href="#">Shipping</a>
-              </li>
-              <li>
-                <a href="#">Returns</a>
-              </li>
+              <li>Contact Us</li>
+              <li>FAQs</li>
+              <li>Shipping</li>
+              <li>Returns</li>
             </ul>
           </div>
           <div className="footer-col">
             <h4>My Account</h4>
             <ul>
-              <li>
-                <a href="#">My Orders</a>
-              </li>
-              <li>
-                <a href="#">My Account</a>
-              </li>
-              <li>
-                <a href="#">Wishlist</a>
-              </li>
-              <li>
-                <a href="#">Newsletter</a>
-              </li>
+              <li>My Orders</li>
+              <li>My Account</li>
+              <li>Wishlist</li>
+              <li>Newsletter</li>
             </ul>
           </div>
           <div className="footer-col">
             <h4>Follow Us</h4>
             <ul className="social-icons">
               <li>
-                <a href="#">
-                  <FaFacebook />
-                </a>
+                <FaFacebook />
               </li>
               <li>
-                <a href="#">
-                  <FaTwitter />
-                </a>
+                <FaTwitter />
               </li>
               <li>
-                <a href="#">
-                  <FaInstagram />
-                </a>
+                <FaInstagram />
               </li>
             </ul>
           </div>

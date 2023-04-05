@@ -307,3 +307,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.item-detail-wrapper h1 {
+  text-align: left;
+}

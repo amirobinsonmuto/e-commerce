@@ -17,6 +17,7 @@ const Cart = ({
   return (
     <main className="container">
       <h1>Shopping Cart</h1>
+      <p>{subtotal === 0 ? "Nothing in your cart yet!" : ""}</p>
       <div className="cart-wrapper">
         <div className="cart-items-wrapper">
           {items

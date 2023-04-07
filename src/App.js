@@ -13,7 +13,6 @@ import Footer from "./components/Footer";
 function App() {
   const [items, setItems] = useState(data);
   const [subtotal, setSubtotal] = useState(0);
-  const [taxes, setTaxes] = useState(0);
   const [shipping, setShipping] = useState(0.0);
   const [cartCount, setCartCount] = useState(0);
 
@@ -72,9 +71,7 @@ function App() {
   }, [subtotal]);
 
   // set taxes when there is a change in subtotal and shipping
-  useEffect(() => {
-    setTaxes((subtotal + shipping) * 0.12);
-  }, [subtotal, shipping]);
+  const taxes = (subtotal + shipping) * 0.12;
 
   // set cart count when the number of items in the cart changes
   useEffect(() => {

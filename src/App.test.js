@@ -1,20 +1,20 @@
-// import React from "react";
-// import { render, screen } from "@testing-library/react";
-// // import { BrowserRouter } from "react-router-dom";
-// import App from "./App";
+import { render, screen } from "@testing-library/react";
+import { FaExclamation } from "react-icons/fa";
+import "@testing-library/jest-dom";
+import App from "./App";
 
-// test("renders the NavBar", () => {
-//   render(<App />);
-//   // eslint-disable-next-line testing-library/no-debugging-utils
-//   screen.getByRole("");
-//   // expect(screen.getByRole("navigation")).toBeInTheDocument();
-// });
+test("renders the NavBar", () => {
+  render(<App />);
+  // eslint-disable-next-line testing-library/no-debugging-utils
+  screen.getByRole("navigation");
+  expect(screen.getByRole("navigation")).toBeInTheDocument();
+});
 
-// test("renders the Footer", () => {
-//   render(<App />);
-//   const navBarElement = screen.getByRole("contentinfo");
-//   expect(navBarElement).toBeInTheDocument();
-// });
+test("renders the Footer", () => {
+  render(<App />);
+  const navBarElement = screen.getByRole("contentinfo");
+  expect(navBarElement).toBeInTheDocument();
+});
 
 // test("renders the HomePage by default", () => {
 //   render(<App />);
@@ -37,7 +37,7 @@
 //   render(
 //     <BrowserRouter initialEntries={[`/shop/${testItemId}`]}>
 //       <App />
-//
+
 //   );
 //   const itemDetailPageElement = screen.getByTestId('itemdetailpage');
 //   expect(itemDetailPageElement).toBeInTheDocument();

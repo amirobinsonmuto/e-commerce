@@ -20,7 +20,7 @@ const HomePage = () => {
             Shop our collection of pure, therapeutic-grade essential oils and
             blends.
           </p>
-          <Link to="/shop">
+          <Link to="/e-commerce/shop">
             <button className="button">Shop Now</button>
           </Link>
         </div>

@@ -61,8 +61,7 @@ function App() {
       const item = items[i];
       newTotal += item.price * item.quantity;
     }
-    let limitedNum = newTotal;
-    setSubtotal(limitedNum);
+    setSubtotal(newTotal);
   }, [items]);
 
   // set shipping when there is a change in subtotal

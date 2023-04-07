@@ -7,7 +7,7 @@ const Item = ({ item, addToCart }) => {
 
   return (
     <div className="grid-item item">
-      <Link to={`/shop/${item.id}`}>
+      <Link to={`/e-commerce/shop/${item.id}`}>
         <img src={item.image} alt={`${item.name} image}`} />
         <h2>{item.name}</h2>
         <p>{`$${item.price}`}</p>

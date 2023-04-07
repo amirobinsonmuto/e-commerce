@@ -88,17 +88,17 @@ function App() {
       <Router>
         <NavBar cartCount={cartCount} />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/e-commerce" element={<HomePage />} />
           <Route
-            path="/shop"
+            path="/e-commerce/shop"
             element={<ShopPage items={items} addToCart={addToCart} />}
           />
           <Route
-            path="/shop/:id"
+            path="/e-commerce/shop/:id"
             element={<ItemDetailPage items={items} addToCart={addToCart} />}
           />
           <Route
-            path="/cart"
+            path="/e-commerce/cart"
             element={
               <CartPage
                 items={items}

@@ -1,9 +1,9 @@
 import React from "react";
 import Item from "./Item";
 
-const Shop = ({ items, addToCart }) => {
+const ShopPage = ({ items, addToCart }) => {
   return (
-    <main className="container">
+    <main className="container" data-testid="shop-page">
       <h1>Shop</h1>
       <div className="grid-container">
         {items.map((item) => (
@@ -14,4 +14,4 @@ const Shop = ({ items, addToCart }) => {
   );
 };
 
-export default Shop;
+export default ShopPage;

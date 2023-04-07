@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
-const Home = () => {
+const HomePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <main>
+    <main data-testid="home-page">
       <section className="hero">
         <div className="hero-container">
           <h1>
@@ -29,4 +29,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

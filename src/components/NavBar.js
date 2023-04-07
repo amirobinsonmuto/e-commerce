@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 
 const NavBar = ({ cartCount }) => {
   return (
-    <nav>
+    <nav role="navigation">
       <Link to="/">
         <img src={logo} className="logo" alt="Samy Essential Oils Logo" />
       </Link>

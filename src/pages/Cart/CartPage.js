@@ -2,7 +2,7 @@ import React from "react";
 import ItemInCart from "./ItemInCart";
 import { useEffect } from "react";
 
-const Cart = ({
+const CartPage = ({
   items,
   handleQuantityChange,
   removeItem,
@@ -15,7 +15,7 @@ const Cart = ({
   }, []);
 
   return (
-    <main className="container">
+    <main className="container" data-testid="cart-page">
       <h1>Shopping Cart</h1>
       <p>{subtotal === 0 ? "Nothing in your cart yet!" : ""}</p>
       <div className="cart-wrapper">
@@ -75,4 +75,4 @@ const Cart = ({
   );
 };
 
-export default Cart;
+export default CartPage;

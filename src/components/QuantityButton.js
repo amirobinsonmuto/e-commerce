@@ -3,11 +3,15 @@ import { TfiMinus, TfiPlus } from "react-icons/tfi";
 
 const QuantityButton = ({ quantity, setQuantity }) => {
   const increment = () => {
-    setQuantity(quantity + 1);
+    setQuantity((prev) => {
+      return prev + 1;
+    });
   };
 
   const decrement = () => {
-    setQuantity(quantity - 1);
+    setQuantity((prev) => {
+      return prev - 1;
+    });
   };
 
   return (

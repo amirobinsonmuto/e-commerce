@@ -1,4 +1,4 @@
-import item from "./assets/item.png";
+import itemImage from "./assets/item.png";
 
 export const data = [
   {
@@ -7,7 +7,7 @@ export const data = [
     description:
       "Relaxing and calming, lavender essential oil can help soothe the mind and promote restful sleep.",
     price: 24.95,
-    image: item,
+    image: itemImage,
     category: "Wellness",
     isInCart: false,
     quantity: 0,
@@ -18,7 +18,7 @@ export const data = [
     description:
       "Cool and refreshing, peppermint essential oil can help soothe sore muscles and promote mental clarity.",
     price: 18.95,
-    image: item,
+    image: itemImage,
     category: "Wellness",
     isInCart: false,
     quantity: 0,
@@ -29,7 +29,7 @@ export const data = [
     description:
       "Clear and refreshing, eucalyptus essential oil can help promote clear breathing and support the immune system.",
     price: 21.95,
-    image: item,
+    image: itemImage,
     category: "Wellness",
     isInCart: false,
     quantity: 0,
@@ -40,7 +40,7 @@ export const data = [
     description:
       "Cleansing and purifying, tea tree essential oil can help support healthy skin and reduce the appearance of blemishes.",
     price: 16.95,
-    image: item,
+    image: itemImage,
     category: "Skin Care",
     isInCart: false,
     quantity: 0,
@@ -51,7 +51,7 @@ export const data = [
     description:
       "Uplifting and energizing, lemon essential oil can help promote a positive mood and support healthy digestion.",
     price: 14.95,
-    image: item,
+    image: itemImage,
     category: "Wellness",
     isInCart: false,
     quantity: 0,
@@ -62,7 +62,7 @@ export const data = [
     description:
       "Stimulating and invigorating, rosemary essential oil can help promote mental clarity and support healthy hair and scalp.",
     price: 19.95,
-    image: item,
+    image: itemImage,
     category: "Hair Care",
     isInCart: false,
     quantity: 0,
@@ -73,7 +73,7 @@ export const data = [
     description:
       "Refreshing and uplifting, bergamot essential oil can help promote a positive mood and support healthy skin.",
     price: 26.95,
-    image: item,
+    image: itemImage,
     category: "Hair Care",
     isInCart: false,
     quantity: 0,
@@ -84,7 +84,7 @@ export const data = [
     description:
       "Grounding and soothing, frankincense essential oil can help promote feelings of relaxation and spiritual awareness.",
     price: 29.95,
-    image: item,
+    image: itemImage,
     category: "Spiritual",
     isInCart: false,
     quantity: 0,
@@ -95,7 +95,7 @@ export const data = [
     description:
       "Warm and woodsy, cedarwood essential oil can help promote relaxation and support healthy respiratory function.",
     price: 17.95,
-    image: item,
+    image: itemImage,
     category: "Relaxation",
     isInCart: false,
     quantity: 0,
@@ -106,7 +106,7 @@ export const data = [
     description:
       "Invigorating and energizing, lemongrass essential oil can help promote mental clarity and support healthy digestion.",
     price: 12.95,
-    image: item,
+    image: itemImage,
     category: "Wellness",
     isInCart: false,
     quantity: 0,
@@ -117,7 +117,7 @@ export const data = [
     description:
       "Balancing and harmonizing, geranium essential oil can help promote healthy skin and support emotional balance.",
     price: 23.95,
-    image: item,
+    image: itemImage,
     category: "Skin Care",
     isInCart: false,
     quantity: 0,
@@ -128,7 +128,7 @@ export const data = [
     description:
       "Sensual and floral, ylang ylang essential oil can help promote relaxation and support healthy hair and skin.",
     price: 28.95,
-    image: item,
+    image: itemImage,
     category: "Beauty",
     isInCart: false,
     quantity: 0,

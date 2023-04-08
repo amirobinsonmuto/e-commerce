@@ -1,26 +1,24 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
+import "@testing-library/jest-dom";
 import HomePage from "./HomePage";
-import App from "../App";
 
-test("renders the landing page", () => {
-  render(<App />);
+describe("HomePage", () => {
+  test("renders the hero section with correct content", () => {
+    render(
+      <BrowserRouter>
+        <HomePage />
+      </BrowserRouter>
+    );
+
+    const heroTitle = screen.getByText(/Discover the Healing Power/i);
+    const heroSubtitle = screen.getByText(
+      /Shop our collection of pure, therapeutic-grade essential oils and blends./i
+    );
+    const shopButton = screen.getByRole("button", { name: /Shop Now/i });
+
+    expect(heroTitle).toBeInTheDocument();
+    expect(heroSubtitle).toBeInTheDocument();
+    expect(shopButton).toBeInTheDocument();
+  });
 });
-
-// test("renders hero section with title, subtitle, and button", () => {
-//   render(<HomePage />);
-// });
-
-//     // check if the hero title is displayed
-//     const heroTitle = screen.getByText(/Discover the Healing Power/i);
-//     expect(heroTitle).toBeInTheDocument();
-
-//     // check if the hero subtitle is displayed
-//     const heroSubtitle = screen.getByText(/Shop our collection of pure/i);
-//     expect(heroSubtitle).toBeInTheDocument();
-
-//     // check if the "Shop Now" button is displayed and has a link to /shop
-//     const shopButton = screen.getByRole("link", { name: /Shop Now/i });
-//     expect(shopButton).toBeInTheDocument();
-//     expect(shopButton.getAttribute("href")).toBe("/shop");
-//   });
-// });

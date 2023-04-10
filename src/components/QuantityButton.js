@@ -17,6 +17,7 @@ const QuantityButton = ({ quantity, setQuantity }) => {
   return (
     <div className="quantity-button">
       <button
+        data-testid="increment-button"
         className="quantity-button__button"
         onClick={() => {
           decrement();
@@ -25,8 +26,13 @@ const QuantityButton = ({ quantity, setQuantity }) => {
       >
         <TfiMinus />
       </button>
-      <input className="quantity-button__input" value={quantity} readyOnly />
+      <input
+        className="quantity-button__input"
+        value={quantity}
+        readyonly="true"
+      />
       <button
+        data-testid="decrement-button"
         className="quantity-button__button"
         onClick={() => {
           increment();

@@ -8,7 +8,7 @@ const ItemInCart = ({ item, handleQuantityChange, removeItem }) => {
   const [quantity, setQuantity] = useState(item.quantity);
 
   return (
-    <div className="cart-item">
+    <div className="cart-item" data-testid="item-in-cart">
       <img src={item.image} alt={`${item.name} image}`} />
       <div>
         <h3>{item.name}</h3>

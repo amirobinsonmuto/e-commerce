@@ -17,7 +17,7 @@ const QuantityButton = ({ quantity, setQuantity }) => {
   return (
     <div className="quantity-button">
       <button
-        data-testid="increment-button"
+        data-testid="decrement-button"
         className="quantity-button__button"
         onClick={() => {
           decrement();
@@ -32,7 +32,7 @@ const QuantityButton = ({ quantity, setQuantity }) => {
         readyonly="true"
       />
       <button
-        data-testid="decrement-button"
+        data-testid="increment-button"
         className="quantity-button__button"
         onClick={() => {
           increment();

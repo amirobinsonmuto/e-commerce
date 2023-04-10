@@ -1,11 +1,11 @@
 import React from "react";
-import { useState } from "react";
 import QuantityButton from "../../components/QuantityButton";
 import UpdateButton from "./UpdateButton";
 import DeleteButton from "./DeleteButton";
 
 const ItemInCart = ({ item, handleQuantityChange, removeItem }) => {
-  const [quantity, setQuantity] = useState(item.quantity);
+  // useing React.useState() to be able to simulate in test
+  const [quantity, setQuantity] = React.useState(item.quantity);
 
   return (
     <div className="cart-item" data-testid="item-in-cart">

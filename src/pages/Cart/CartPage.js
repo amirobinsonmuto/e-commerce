@@ -31,7 +31,7 @@ const CartPage = ({
               />
             ))}
         </div>
-        <div class="order-summary">
+        <div className="order-summary">
           <h2>ORDER SUMMARY</h2>
           <table>
             <tbody>

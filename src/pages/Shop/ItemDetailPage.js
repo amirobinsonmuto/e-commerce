@@ -14,7 +14,7 @@ const ItemDetailPage = ({ items, addToCart }) => {
   }, []);
 
   return (
-    <main className="container item-detail-wrapper">
+    <main className="container item-detail-wrapper" data-testid="item-detail-page">
       <div className="Item-image">
         <img src={item.image} alt={`${item.name} image}`} />
       </div>

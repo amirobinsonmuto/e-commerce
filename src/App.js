@@ -81,34 +81,34 @@ function App() {
 
   return (
     <>
-      <Router>
-        <NavBar cartCount={cartCount} />
-        <Routes>
-          <Route path="/e-commerce" element={<HomePage />} />
-          <Route
-            path="/e-commerce/shop"
-            element={<ShopPage items={items} addToCart={addToCart} />}
-          />
-          <Route
-            path="/e-commerce/shop/:id"
-            element={<ItemDetailPage items={items} addToCart={addToCart} />}
-          />
-          <Route
-            path="/e-commerce/cart"
-            element={
-              <CartPage
-                items={items}
-                handleQuantityChange={handleQuantityChange}
-                removeItem={removeItem}
-                subtotal={subtotal}
-                taxes={taxes}
-                shipping={shipping}
-              />
-            }
-          />
-        </Routes>
-        <Footer />
-      </Router>
+      {/* <Router> */}
+      <NavBar cartCount={cartCount} />
+      <Routes>
+        <Route path="/e-commerce" element={<HomePage />} />
+        <Route
+          path="/e-commerce/shop"
+          element={<ShopPage items={items} addToCart={addToCart} />}
+        />
+        <Route
+          path="/e-commerce/shop/:id"
+          element={<ItemDetailPage items={items} addToCart={addToCart} />}
+        />
+        <Route
+          path="/e-commerce/cart"
+          element={
+            <CartPage
+              items={items}
+              handleQuantityChange={handleQuantityChange}
+              removeItem={removeItem}
+              subtotal={subtotal}
+              taxes={taxes}
+              shipping={shipping}
+            />
+          }
+        />
+      </Routes>
+      <Footer />
+      {/* </Router> */}
     </>
   );
 }

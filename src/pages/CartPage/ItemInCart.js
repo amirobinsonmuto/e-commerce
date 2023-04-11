@@ -9,7 +9,7 @@ const ItemInCart = ({ item, handleQuantityChange, removeItem }) => {
 
   return (
     <div className="cart-item" data-testid="item-in-cart">
-      <img src={item.image} alt={`${item.name} image}`} />
+      <img src={item.image} alt={`${item.name} image`} />
       <div>
         <h3>{item.name}</h3>
         <p>{item.description}</p>

@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { data } from "./data";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import HomePage from "./pages/HomePage";
-import ShopPage from "./pages/Shop/ShopPage";
-import ItemDetailPage from "./pages/Shop/ItemDetailPage";
-import CartPage from "./pages/Cart/CartPage";
+import HomePage from "./pages/HomePage/HomePage";
+import ShopPage from "./pages/ShopPage/ShopPage";
+import ItemDetailPage from "./pages/ShopPage/ItemDetailPage";
+import CartPage from "./pages/CartPage/CartPage";
 import Footer from "./components/Footer";
 
 function App() {

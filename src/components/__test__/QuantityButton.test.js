@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import QuantityButton from "./QuantityButton";
+import QuantityButton from "../QuantityButton";
 import "@testing-library/jest-dom";
 // import { act } from "react-dom/test-utils";
 // import userEvent from "@testing-library/user-event";

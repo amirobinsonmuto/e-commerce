@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import CartPage from "./CartPage";
+import CartPage from "../CartPage";
 
 describe("CartPage", () => {
   const items = [

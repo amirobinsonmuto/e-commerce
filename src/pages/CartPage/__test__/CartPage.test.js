@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 import CartPage from "../CartPage";
 
@@ -60,7 +61,27 @@ describe("CartPage", () => {
     expect(itemInCartElements).toHaveLength(2);
   });
 
-  test("calls the handleQuantityChange function when the quantity is changed", () => {
+  test("calls the handleQuantityChange function when the quantity is changed", async () => {
+    render(
+      <CartPage
+        items={items}
+        handleQuantityChange={handleQuantityChange}
+        removeItem={removeItem}
+        subtotal={subtotal}
+        taxes={taxes}
+        shipping={shipping}
+      />
+    );
+    const user = userEvent.setup();
+
+    const updateQuantityButtons = screen.getAllByRole("button", {
+      name: /UPDATE QUANTITY/i,
+    });
+    await user.click(updateQuantityButtons[0]);
+    expect(handleQuantityChange).toHaveBeenCalledTimes(1);
+  });
+
+  test("calls the removeItem function when the remove button is clicked", () => {
     render(
       <CartPage
         items={items}
@@ -72,27 +93,10 @@ describe("CartPage", () => {
       />
     );
 
-    const updateQuantityButtons = screen.getAllByRole("button", {
-      name: /UPDATE QUANTITY/i,
-    });
-    fireEvent.click(updateQuantityButtons[0]);
-    expect(handleQuantityChange).toHaveBeenCalledTimes(1);
+    const deleteButtons = screen.getAllByTestId("delete-button");
+    fireEvent.click(deleteButtons[0]);
+    expect(removeItem).toHaveBeenCalledTimes(1);
   });
 
-    test("calls the removeItem function when the remove button is clicked", () => {
-      render(
-        <CartPage
-          items={items}
-          handleQuantityChange={handleQuantityChange}
-          removeItem={removeItem}
-          subtotal={subtotal}
-          taxes={taxes}
-          shipping={shipping}
-        />
-      );
-
-      const deleteButtons = screen.getAllByTestId("delete-button");
-      fireEvent.click(deleteButtons[0]);
-      expect(removeItem).toHaveBeenCalledTimes(1);
-    });
+  
 });

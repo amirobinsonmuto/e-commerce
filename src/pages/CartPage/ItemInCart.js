@@ -16,7 +16,11 @@ const ItemInCart = ({ item, handleQuantityChange, removeItem }) => {
         <p>{`$${item.price}`}</p>
         <p>Quantity: {item.quantity}</p>
         <div className="cart-item-buttons-wrapper">
-          <QuantityButton quantity={count} increment={increment} decrement={decrement} />
+          <QuantityButton
+            quantity={count}
+            increment={increment}
+            decrement={decrement}
+          />
           <UpdateButton
             itemId={item.id}
             quantity={count}

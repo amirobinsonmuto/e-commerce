@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import "@testing-library/jest-dom";
 import ShopPage from "../ShopPage";
-import itemImage from "../../assets/item.png";
+import itemImage from "../../../assets/logo.png";
 
 describe("ShopPage", () => {
   const items = [

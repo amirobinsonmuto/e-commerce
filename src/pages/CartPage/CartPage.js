@@ -64,7 +64,7 @@ const CartPage = ({
           </table>
           <br />
           <p>
-            {shipping === 0 && !subtotal === 0
+            {shipping === 0 && subtotal > 0
               ? "Congrats! You get free shipping"
               : "Your shipping will be free when you order more than $50"}
           </p>

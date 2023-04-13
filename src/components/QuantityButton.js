@@ -1,18 +1,7 @@
 import React from "react";
 import { TfiMinus, TfiPlus } from "react-icons/tfi";
 
-const QuantityButton = ({ quantity, setQuantity }) => {
-  const increment = () => {
-    setQuantity((prev) => {
-      return prev + 1;
-    });
-  };
-
-  const decrement = () => {
-    setQuantity((prev) => {
-      return prev - 1;
-    });
-  };
+const QuantityButton = ({ quantity, increment, decrement }) => {
 
   return (
     <div className="quantity-button">

@@ -2,10 +2,10 @@ import React from "react";
 import QuantityButton from "../../components/QuantityButton";
 import UpdateButton from "./UpdateButton";
 import DeleteButton from "./DeleteButton";
+import useCounter from "../../hooks/useCounter";
 
 const ItemInCart = ({ item, handleQuantityChange, removeItem }) => {
-  // useing React.useState() to be able to simulate in test
-  const [quantity, setQuantity] = React.useState(item.quantity);
+  const { count, increment, decrement } = useCounter(item.quantity);
 
   return (
     <div className="cart-item" data-testid="item-in-cart">
@@ -16,10 +16,10 @@ const ItemInCart = ({ item, handleQuantityChange, removeItem }) => {
         <p>{`$${item.price}`}</p>
         <p>Quantity: {item.quantity}</p>
         <div className="cart-item-buttons-wrapper">
-          <QuantityButton quantity={quantity} setQuantity={setQuantity} />
+          <QuantityButton quantity={count} increment={increment} decrement={decrement} />
           <UpdateButton
             itemId={item.id}
-            quantity={quantity}
+            quantity={count}
             handleQuantityChange={handleQuantityChange}
             removeItem={removeItem}
           />

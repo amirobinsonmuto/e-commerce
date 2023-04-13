@@ -8,6 +8,7 @@ const UpdateButton = ({
 }) => {
   return (
     <button
+      data-testid="update-button"
       className="button"
       onClick={() => {
         handleQuantityChange(itemId, quantity);
